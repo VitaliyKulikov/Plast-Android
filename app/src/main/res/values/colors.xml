@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8d97a0</color>
+    <color name="colorPrimaryDark">#2e3039</color>
+    <color name="colorAccent">#536DFE</color>
+    <color name="colorAccentTransparent">#4cee5749</color>
+
+    <color name="colorSuccess">#4cd964</color>
+    <color name="colorError">#ff4b06</color>
+    <color name="colorWhite">#fff</color>
+    <color name="dividerColor">#E8E8E8</color>
+
+    <color name="ripple_dark">#33ffffff</color>
+    <color name="ripple_light">#1f000000</color>
+
+    <color name="colorBlue">#3b5998</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="BlackTransparent">#80323232</color>
+
+    <color name="colorWindowBackground">#f2f2f2</color>
+</resources>

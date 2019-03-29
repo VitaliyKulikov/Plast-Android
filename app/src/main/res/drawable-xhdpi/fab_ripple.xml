@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:color="@color/ripple_light"
+        android:width="56dp"
+        android:height="56dp"
+        android:viewportWidth="56"
+        android:viewportHeight="56"
+        tools:targetApi="lollipop"> <!-- ripple effect color -->
+    <item android:gravity="center"
+          android:drawable="@drawable/ic_button_add">
+    </item>
+</ripple>

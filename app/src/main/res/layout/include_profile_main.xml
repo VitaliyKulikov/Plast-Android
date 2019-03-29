@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="110dp"
+               android:layout_height="110dp"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_marginStart="@dimen/margin_normal"
+               android:layout_marginTop="@dimen/margin_large"
+               tools:src="@tools:sample/backgrounds/scenic"
+               android:scaleType="centerCrop"
+               app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.Main.Title"
+            android:text="Nour Almasri"
+            app:layout_constraintTop_toTopOf="@+id/profile_photo"
+            app:layout_constraintStart_toEndOf="@+id/profile_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            tools:text="Nour Almasri"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            android:src="@drawable/ic_location"
+            android:layout_marginTop="11dp"
+            android:id="@+id/location_icon"/>
+
+    <TextView
+            android:id="@+id/location_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="12dp"
+            android:text="Dubai, Deira"
+            android:layout_marginEnd="@dimen/margin_normal"
+            app:layout_constraintTop_toTopOf="@+id/location_icon"
+            app:layout_constraintStart_toEndOf="@+id/location_icon"
+            tools:text="Dubai, Deira"/>
+    <View
+            android:id="@+id/toolbarDivider"
+            android:layout_width="match_parent"
+            style="@style/AppTheme.Main.Divider"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_height="@dimen/divider"
+            app:layout_constraintTop_toBottomOf="@+id/profile_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    </style>
+
+    <style name="AppTheme.LightNav" parent="AppTheme" />
+
+    <style name="AppTheme.Launcher" parent="@style/AppTheme.LightNav">
+        <item name="android:windowBackground">@drawable/preview_window</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Customize text styles -->
+    <style name="AppTheme.Onboarding.Title" parent="@style/AppTheme">
+        <item name="android:textSize">23sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+    <style name="AppTheme.Onboarding.Description" parent="@style/AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.Login.Title" parent="@style/AppTheme">
+        <item name="android:textSize">34sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <style name="AppTheme.Login.AccentColorText" parent="@style/AppTheme">
+        <item name="android:background">@drawable/shape_rounded_ripple_white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <style name="AppTheme.Main.Title" parent="@style/AppTheme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">@dimen/spacing_normal</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <style name="AppTheme.Main.Action.Title" parent="@style/AppTheme">
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="android:drawablePadding">@dimen/spacing_super_large</item>
+        <item name="android:paddingStart">@dimen/margin_normal</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:padding">@dimen/padding_super_large</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+    <!-- Customize text styles -->
+
+    <!-- Customize divider styles -->
+    <style name="AppTheme.Main.Divider" parent="@style/AppTheme">
+        <item name="android:background">@color/dividerColor</item>
+        <item name="android:height">@dimen/divider</item>
+    </style>
+    <!-- Customize divider styles -->
+
+    <!-- Customize text_button styles -->
+    <style name="AppTheme.Buttons.Rounded" parent="@style/AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="AppTheme.Buttons.Rounded.MainGradient" parent="@style/AppTheme.Buttons.Rounded">
+        <item name="android:background">@drawable/shape_rounded_ripple_main_gradient</item>
+    </style>
+    <style name="AppTheme.Buttons.Rounded.Blue" parent="@style/AppTheme.Buttons.Rounded">
+        <item name="android:background">@drawable/shape_rounded_ripple_blue</item>
+    </style>
+    <style name="AppTheme.Buttons.Rounded.Border" parent="@style/AppTheme.Buttons.Rounded">
+        <item name="android:background">@drawable/shape_rounded_ripple_border</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.Buttons.Text.Red" parent="@style/AppTheme">
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">@drawable/shape_rounded_ripple_white</item>
+    </style>
+
+    <style name="AppTheme.Buttons.Text.Grey" parent="@style/AppTheme">
+        <item name="android:textSize">17sp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <!-- Customize button styles -->
+
+    <!-- Customize view styles -->
+    <style name="AppTheme.View.BG.Rounded" parent="@style/AppTheme">
+        <item name="android:background">@drawable/shape_white_top_rounded</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <!-- Customize view styles -->
+
+    <!-- Customize EditText styles -->
+    <style name="AppTheme.TextInputEditText.UnderLined" parent="@style/AppTheme">
+            <item name="android:textSize">17sp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+    <!-- Customize view styles -->
+
+    <!-- Customize FAB styles -->
+    <style name="AppTheme.FAB.Main" parent="@style/AppTheme">
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+    <!-- Customize view styles -->
+    <!-- Customize FAB styles -->
+    <style name="AppTheme.BottomNavigationView" parent="@style/AppTheme">
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+    <!-- Customize FAB styles -->
+</resources>
