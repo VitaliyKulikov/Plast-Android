@@ -2,7 +2,7 @@ package com.bbook.app.data.local
 
 import android.location.Location
 import androidx.room.TypeConverter
-import com.bbook.app.extensions.fromJson
+import com.bbook.app.toolbox.extensions.fromJson
 import com.google.gson.Gson
 
 class DbTypeConverter {

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
-import com.bbook.app.extensions.hideKeyboard
+import com.bbook.app.toolbox.extensions.hideKeyboard
 
 abstract class BaseFragment : Fragment(), Injectable {
 

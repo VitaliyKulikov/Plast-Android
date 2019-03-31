@@ -2,7 +2,7 @@ package com.bbook.app.repositories
 
 import androidx.lifecycle.MutableLiveData
 import com.bbook.app.AppExecutors
-import com.bbook.app.data.remote.api.ContentApi
+import com.bbook.app.api.ContentApi
 import com.bbook.app.data.remote.responsebodies.IntroResponseBody
 import com.bbook.app.models.IntroModel
 import com.bbook.app.models.network.NetworkState

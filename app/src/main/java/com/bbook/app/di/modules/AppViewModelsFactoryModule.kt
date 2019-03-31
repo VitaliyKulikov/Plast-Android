@@ -5,7 +5,7 @@ import com.bbook.app.di.AppViewModelsComponent
 import dagger.Module
 import dagger.Provides
 
-@Module
+@Module(subcomponents = [AppViewModelsComponent::class])
 class AppViewModelsFactoryModule {
 
     @Provides

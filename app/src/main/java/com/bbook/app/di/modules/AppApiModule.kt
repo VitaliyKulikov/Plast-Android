@@ -1,7 +1,7 @@
 package com.bbook.app.di.modules
 
-import com.bbook.app.data.remote.api.ContentApi
-import com.bbook.app.data.remote.api.UserApi
+import com.bbook.app.api.ContentApi
+import com.bbook.app.api.UserApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

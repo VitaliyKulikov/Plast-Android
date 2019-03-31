@@ -1,10 +1,10 @@
 package com.bbook.app.di
 
-import com.bbook.app.ui.launcher.viewmodel.LaunchViewModel
-import com.bbook.app.ui.login.viewmodel.LoginViewModel
-import com.bbook.app.ui.main.guide.viewmodel.GuideViewModel
-import com.bbook.app.ui.onboarding.viewmodel.OnBoardViewModel
-import com.bbook.app.ui.signup.viewmodel.SignUpViewModel
+import com.bbook.app.features.launcher.viewmodel.LaunchViewModel
+import com.bbook.app.features.login.viewmodel.LoginViewModel
+import com.bbook.app.features.main.guide.viewmodel.GuideViewModel
+import com.bbook.app.features.onboarding.viewmodel.OnBoardViewModel
+import com.bbook.app.features.signup.viewmodel.SignUpViewModel
 import dagger.Subcomponent
 
 @Subcomponent

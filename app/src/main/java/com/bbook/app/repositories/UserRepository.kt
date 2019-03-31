@@ -5,7 +5,7 @@ import androidx.lifecycle.MediatorLiveData
 import com.bbook.app.AppExecutors
 import com.bbook.app.data.local.AppDatabase
 import com.bbook.app.data.local.database.entity.UserEntity
-import com.bbook.app.data.remote.api.UserApi
+import com.bbook.app.api.UserApi
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback

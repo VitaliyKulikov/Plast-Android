@@ -20,30 +20,30 @@
         <activity-alias
                 android:name=".Launcher"
                 android:label="@string/app_name"
-                android:targetActivity="com.bbook.app.ui.launcher.LauncherActivity">
+                android:targetActivity=".features.launcher.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
         <activity
-                android:name="com.bbook.app.ui.launcher.LauncherActivity"
+                android:name="com.bbook.app.features.launcher.LauncherActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme.Launcher"/>
         <activity
-                android:name="com.bbook.app.ui.onboarding.OnboardingActivity"
+                android:name="com.bbook.app.features.onboarding.OnboardingActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme.Launcher"/>
         <activity
-                android:name="com.bbook.app.ui.login.LoginActivity"
+                android:name="com.bbook.app.features.login.LoginActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
         <activity
-                android:name="com.bbook.app.ui.signup.SignUpActivity"
+                android:name="com.bbook.app.features.signup.SignUpActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
         <activity
-                android:name="com.bbook.app.ui.main.MainActivity"
+                android:name="com.bbook.app.features.main.MainActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
     </application>
