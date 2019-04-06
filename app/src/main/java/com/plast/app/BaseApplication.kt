@@ -2,6 +2,7 @@ package com.plast.app
 
 import android.app.Activity
 import androidx.multidex.MultiDexApplication
+import com.google.firebase.FirebaseApp
 import com.plast.app.di.AppComponent
 import com.plast.app.di.initInjections
 import dagger.android.AndroidInjector
@@ -21,6 +22,7 @@ class BaseApplication : MultiDexApplication(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
+        FirebaseApp.initializeApp(this)
         instance = this
         appComponent = initInjections(this)
     }
