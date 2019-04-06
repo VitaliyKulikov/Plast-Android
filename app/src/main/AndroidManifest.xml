@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.bbook.app">
+          package="com.plast.app">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-            android:name="com.bbook.app.BaseApplication"
+            android:name="com.plast.app.BaseApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -20,30 +20,30 @@
         <activity-alias
                 android:name=".Launcher"
                 android:label="@string/app_name"
-                android:targetActivity=".features.launcher.LauncherActivity">
+                android:targetActivity="com.plast.app.features.launcher.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
         <activity
-                android:name="com.bbook.app.features.launcher.LauncherActivity"
+                android:name="com.plast.app.features.launcher.LauncherActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme.Launcher"/>
         <activity
-                android:name="com.bbook.app.features.onboarding.OnboardingActivity"
+                android:name="com.plast.app.features.onboarding.OnboardingActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme.Launcher"/>
         <activity
-                android:name="com.bbook.app.features.login.LoginActivity"
+                android:name="com.plast.app.features.login.LoginActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
         <activity
-                android:name="com.bbook.app.features.signup.SignUpActivity"
+                android:name="com.plast.app.features.signup.SignUpActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
         <activity
-                android:name="com.bbook.app.features.main.MainActivity"
+                android:name="com.plast.app.features.main.MainActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
     </application>

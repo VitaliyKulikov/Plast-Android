@@ -16,11 +16,11 @@ android {
     def Boolean = "Boolean"
     def String = "String"
 
-    def devHost = '"http://bbook-app/"'
-    def prodHost = '"http://bbook-app/"'
+    def devHost = '"http://plast-app/"'
+    def prodHost = '"http://plast-app/"'
 
     defaultConfig {
-        applicationId "bbook.com"
+        applicationId "start.plast.com"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
