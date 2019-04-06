@@ -36,5 +36,4 @@ interface FragmentBuilder {
 
     @ContributesAndroidInjector
     fun provideCheckListPagerFragment(): CheckListPagerFragment
-
 }

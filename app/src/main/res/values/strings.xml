@@ -1,34 +1,38 @@
 <resources>
-    <string name="app_name">StartPlast</string>
+	<string name="app_name">StartPlast</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- Onbouarding  -->
-    <string name="let_s_start">LET’S START</string>
-    <string name="skip">Skip</string>
-    <!-- Onbouarding  -->
+	<!-- Onbouarding  -->
+	<string name="let_s_start">LET’S START</string>
+	<string name="skip">Skip</string>
+	<!-- Onbouarding  -->
 
-    <!-- Login  -->
-    <string name="sign_in">Sign in</string>
-    <string name="password">Password</string>
-    <string name="email_or_phone_number">Email or Phone Number</string>
-    <string name="sign_in_with_facebook">SIGN IN WITH FACEBOOK</string>
-    <string name="don_t_have_an_account">Don’t have an account?</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="or">OR</string>
-    <string name="forgot_password">Forgot password ?</string>
+	<!-- Login  -->
+	<string name="sign_in">Sign in</string>
+	<string name="password">Password</string>
+	<string name="email_or_phone_number">Email or Phone Number</string>
+	<string name="sign_in_with_facebook">SIGN IN WITH FACEBOOK</string>
+	<string name="don_t_have_an_account">Don’t have an account?</string>
+	<string name="sign_up">Sign Up</string>
+	<string name="or">OR</string>
+	<string name="forgot_password">Forgot password ?</string>
 
-    <!-- Button navigation  -->
-    <string name="home">Home</string>
-    <string name="my_profile">My Profile</string>
-    <string name="notifications">Notifications</string>
-    <string name="guide">Guide</string>
-    <string name="plus99">99+</string>
-    <!-- Button navigation  -->
+	<!-- Button navigation  -->
+	<string name="home">Home</string>
+	<string name="my_profile">My Profile</string>
+	<string name="notifications">Notifications</string>
+	<string name="guide">Guide</string>
+	<string name="plus99">99+</string>
+	<!-- Button navigation  -->
 
-    <string name="settings">Settings</string>
-    <string name="add_review">Add review</string>
-    <string name="add_place">Add Place</string>
+	<string name="settings">Settings</string>
+	<string name="add_review">Add review</string>
+	<string name="add_place">Add Place</string>
+
+	<string name="tools_description_text">Знайомся - це нова роль у твоєму житті “пластун/пластунка”. І щоб пізнати справжнє пластування - велику гру, тобі необхідно підкорити твою першу вершину - стати дійсним членом Пласту! До цієї вершини вже прокладено маршрут і його ти можеш проходити у довільному порядку. На кожному етапі ти матимеш завдання, за які зможеш отримати пласткоіни (валюта) та обміняти їх на пластову атрибутику.  Цікаво, правда? :) Ми гарантуємо, твоя нова частина життя - пластування ще цікавіша та непередбачувана. Тож приготуйся до пригод. Вперед і вгору! І пам’ятай, ти завжди можеш задавати питання та просити про допомогу у віконечку “?”.</string>
+
+	<string name="details">Деталі</string>
 
 </resources>

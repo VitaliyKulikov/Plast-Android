@@ -8,6 +8,8 @@
     <color name="colorSuccess">#4cd964</color>
     <color name="colorError">#ff4b06</color>
     <color name="colorWhite">#fff</color>
+    <color name="colorBlack">#FF0F0F0F</color>
+    <color name="colorYellow">#94E08F00</color>
     <color name="dividerColor">#E8E8E8</color>
 
     <color name="ripple_dark">#33ffffff</color>
