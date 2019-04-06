@@ -19,7 +19,6 @@ interface AppViewModelsComponent {
     fun provideLaunchViewModel(): LaunchViewModel
     fun provideOnBoardViewModel(): OnBoardViewModel
     fun provideLoginViewModel(): LoginViewModel
-    fun provideMainViewModel(): GuideViewModel
     fun provideSignUpViewModel(): SignUpViewModel
     fun provideCheckListPagerViewModel(): CheckListPagerViewModel
 }

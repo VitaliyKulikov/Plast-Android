@@ -6,6 +6,7 @@ import com.plast.app.features.main.guide.fragments.GuideFragment
 import com.plast.app.features.main.home.fragments.HomeFragment
 import com.plast.app.features.main.notification.fragments.NotificationFragment
 import com.plast.app.features.main.profile.fragments.ProfileFragment
+import com.plast.app.features.main.fragments.MainFragment
 import com.plast.app.features.onboarding.fragments.OnBoardingFragment
 import com.plast.app.features.signup.fragments.SignUpFragment
 import dagger.Module
@@ -33,6 +34,9 @@ interface FragmentBuilder {
 
     @ContributesAndroidInjector
     fun provideLoginFragment(): LoginFragment
+
+    @ContributesAndroidInjector
+    fun provideMainFragment(): MainFragment
 
     @ContributesAndroidInjector
     fun provideCheckListPagerFragment(): CheckListPagerFragment
