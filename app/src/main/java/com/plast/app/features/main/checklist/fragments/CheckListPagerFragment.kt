@@ -5,7 +5,6 @@ import android.view.View
 import com.plast.app.AppViewModelsFactory
 import com.plast.app.R
 import com.plast.app.baseui.BaseFragment
-import com.plast.app.features.main.guide.viewmodel.GuideViewModel
 import javax.inject.Inject
 
 class CheckListPagerFragment : BaseFragment() {
@@ -17,7 +16,6 @@ class CheckListPagerFragment : BaseFragment() {
 
     @Inject
     lateinit var vmFactory: AppViewModelsFactory
-    private lateinit var viewModel: GuideViewModel
 
     override fun layoutId(): Int = R.layout.fragment_checklist_pager
 
