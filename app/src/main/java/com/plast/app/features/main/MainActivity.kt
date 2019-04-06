@@ -5,23 +5,21 @@ import com.plast.app.R
 import com.plast.app.baseui.BaseActivity
 import com.plast.app.features.main.fragments.MainFragment
 
+
 class MainActivity : BaseActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        addFragment()
+    }
 
-    class MainActivity : BaseActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
-            addFragment()
-        }
-
-        private fun addFragment() {
-            supportFragmentManager.beginTransaction()
-                    .add(
-                            R.id.fragmentContainer,
-                            MainFragment.newInstance(),
-                            MainFragment.TAG
-                    )
-                    .commit()
-        }
+    private fun addFragment() {
+        supportFragmentManager.beginTransaction()
+            .add(
+                R.id.fragmentContainer,
+                MainFragment.newInstance(),
+                MainFragment.TAG
+            )
+            .commit()
     }
 }
