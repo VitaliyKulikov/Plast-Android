@@ -1,7 +1,7 @@
 package com.plast.app.di.modules
 
 import com.plast.app.features.login.fragments.LoginFragment
-import com.plast.app.features.main.checklist.fragments.CheckListPagerFragment
+import com.plast.app.features.main.checklist.fragments.CardFragment
 import com.plast.app.features.main.fragments.MainFragment
 import com.plast.app.features.onboarding.fragments.OnBoardingFragment
 import com.plast.app.features.profile.fragment.ProfileFragment
@@ -28,5 +28,5 @@ interface FragmentBuilder {
     fun provideProfileFragment(): ProfileFragment
 
     @ContributesAndroidInjector
-    fun provideCheckListPagerFragment(): CheckListPagerFragment
+    fun provideCheckListPagerFragment(): CardFragment
 }

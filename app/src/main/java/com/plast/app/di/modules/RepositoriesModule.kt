@@ -3,6 +3,7 @@ package com.plast.app.di.modules
 import com.plast.app.AppExecutors
 import com.plast.app.data.local.AppDatabase
 import com.plast.app.api.UserApi
+import com.plast.app.repositories.CardRepository
 import com.plast.app.repositories.UserRepository
 import dagger.Module
 import dagger.Provides
@@ -18,4 +19,7 @@ class RepositoriesModule {
     ): UserRepository {
         return UserRepository(appDatabase, appExecutors, userApi)
     }
+
+    @Provides
+    fun provideCardRepository() = CardRepository()
 }
