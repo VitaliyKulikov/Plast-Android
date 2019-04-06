@@ -4,6 +4,7 @@ import com.plast.app.features.launcher.LauncherActivity
 import com.plast.app.features.login.LoginActivity
 import com.plast.app.features.main.MainActivity
 import com.plast.app.features.onboarding.OnboardingActivity
+import com.plast.app.features.profile.ProfileActivity
 import com.plast.app.features.signup.SignUpActivity
 
 import dagger.Module
@@ -26,4 +27,7 @@ interface ActivityBuilder {
 
     @ContributesAndroidInjector
     fun contributeSignUp(): SignUpActivity
+
+    @ContributesAndroidInjector
+    fun contributeProfile(): ProfileActivity
 }

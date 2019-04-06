@@ -2,6 +2,7 @@ package com.plast.app.di
 
 import com.plast.app.features.launcher.viewmodel.LaunchViewModel
 import com.plast.app.features.login.viewmodel.LoginViewModel
+import com.plast.app.features.main.viewmodel.MainViewModel
 import com.plast.app.features.onboarding.viewmodel.OnBoardViewModel
 import com.plast.app.features.signup.viewmodel.SignUpViewModel
 import dagger.Subcomponent
@@ -18,4 +19,5 @@ interface AppViewModelsComponent {
     fun provideOnBoardViewModel(): OnBoardViewModel
     fun provideLoginViewModel(): LoginViewModel
     fun provideSignUpViewModel(): SignUpViewModel
+    fun provideMainViewModel(): MainViewModel
 }

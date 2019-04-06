@@ -7,6 +7,7 @@ import com.plast.app.AppViewModelsFactory
 import com.plast.app.R
 import com.plast.app.ToolbarFragment
 import com.plast.app.features.signup.viewmodel.SignUpViewModel
+import viewModelProvider
 import javax.inject.Inject
 
 class SignUpFragment : ToolbarFragment(),View.OnClickListener {
@@ -29,9 +30,7 @@ class SignUpFragment : ToolbarFragment(),View.OnClickListener {
     }
 
     override fun initViewModel() {
-        viewModel = ViewModelProviders
-            .of(this, vmFactory)
-            .get(SignUpViewModel::class.java)
+        viewModel = viewModelProvider(vmFactory)
     }
 
     override fun setListeners() {
