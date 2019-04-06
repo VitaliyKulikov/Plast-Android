@@ -4,12 +4,12 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
+        android:background="@color/colorPrimaryDark"
         android:fitsSystemWindows="true"
         tools:context=".features.login.LoginActivity">
 
-    <ImageView android:layout_width="48dp"
-               android:layout_height="48dp"
+    <ImageView android:layout_width="56dp"
+               android:layout_height="56dp"
                android:padding="@dimen/padding_normal"
                android:src="@drawable/ic_place_holder_circle"
                app:layout_constraintTop_toTopOf="parent"
@@ -19,6 +19,7 @@
 
     <TextView android:layout_width="0dp"
               android:layout_height="0dp"
+              android:textSize="18sp"
               app:layout_constraintStart_toEndOf="@+id/ivAvatar"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintTop_toTopOf="@+id/ivAvatar"
