@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-            android:name="com.plast.app.BaseApplication"
+            android:name=".BaseApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -15,35 +15,41 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
-        <!-- This activity alias lets us change the main entry point without
-         breaking launcher shortcuts. DO NOT change its android:name attribute.-->
+        <activity android:name=".features.profile.ProfileActivity">
+        </activity>
+        <activity
+                android:name=".features.launcher.LauncherActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.Launcher"/>
+        <!--
+ This activity alias lets us change the main entry point without
+         breaking launcher shortcuts. DO NOT change its android:name attribute.
+        -->
         <activity-alias
                 android:name=".Launcher"
                 android:label="@string/app_name"
-                android:targetActivity="com.plast.app.features.launcher.LauncherActivity">
+                android:targetActivity=".features.launcher.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
+
         <activity
-                android:name="com.plast.app.features.launcher.LauncherActivity"
+                android:name=".features.onboarding.OnboardingActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme.Launcher"/>
         <activity
-                android:name="com.plast.app.features.onboarding.OnboardingActivity"
-                android:screenOrientation="portrait"
-                android:theme="@style/AppTheme.Launcher"/>
-        <activity
-                android:name="com.plast.app.features.login.LoginActivity"
+                android:name=".features.login.LoginActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
         <activity
-                android:name="com.plast.app.features.signup.SignUpActivity"
+                android:name=".features.signup.SignUpActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
         <activity
-                android:name="com.plast.app.features.main.MainActivity"
+                android:name=".features.main.MainActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/AppTheme"/>
     </application>
