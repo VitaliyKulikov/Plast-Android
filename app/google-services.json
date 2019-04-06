@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "413435101644",
+    "firebase_url": "https://start-plast.firebaseio.com",
+    "project_id": "start-plast",
+    "storage_bucket": "start-plast.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413435101644:android:3efea52e7364ea9c",
+        "android_client_info": {
+          "package_name": "com.plast.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413435101644-2vqqe56o8vp8q4ke681vqnogf293bg5g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.plast.app",
+            "certificate_hash": "8116bda6a387bd51ead18fa7f4fd2c6f2e011fa0"
+          }
+        },
+        {
+          "client_id": "413435101644-tvk5esm1uvk5miqrt5l83po1ssr9cttq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.plast.app",
+            "certificate_hash": "c7e393091e9e5f3a9022d925d74171377fc8d836"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9mO_r7NUlB4qU2rHH1xLY_labPiExa-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413435101644-dg237fhovmoil7tqk3do7a41vt8cl42j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "413435101644-9m7jf981rkof9qe5d5rb4csr8pk2tt9q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ua.org.plast.StartPlast"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
