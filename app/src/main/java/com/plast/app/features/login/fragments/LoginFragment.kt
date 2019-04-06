@@ -3,6 +3,7 @@ package com.plast.app.features.login.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -13,10 +14,12 @@ import com.plast.app.AppViewModelsFactory
 import com.plast.app.R
 import com.plast.app.baseui.BaseFragment
 import com.plast.app.features.login.viewmodel.LoginViewModel
+import com.plast.app.features.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_login.*
+import viewModelProvider
 import javax.inject.Inject
 
-class LoginFragment : BaseFragment(),View.OnClickListener {
+class LoginFragment : BaseFragment(), View.OnClickListener {
     @Inject
     lateinit var vmFactory: AppViewModelsFactory
     private lateinit var viewModel: LoginViewModel
@@ -45,9 +48,13 @@ class LoginFragment : BaseFragment(),View.OnClickListener {
     }
 
     override fun initViewModel() {
-        viewModel = ViewModelProviders
-            .of(this, vmFactory)
-            .get(LoginViewModel::class.java)
+        viewModel = viewModelProvider(vmFactory)
+        viewModel.loginedLiveData.observe(this, Observer {
+            if (it == true) {
+                startActivity(Intent(context, MainActivity::class.java))
+                activity?.finish()
+            }
+        })
     }
 
     override fun setListeners() {

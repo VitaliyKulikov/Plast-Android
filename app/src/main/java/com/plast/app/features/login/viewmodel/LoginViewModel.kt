@@ -1,6 +1,8 @@
 package com.plast.app.features.login.viewmodel
 
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.FirebaseAuth
@@ -14,8 +16,9 @@ class LoginViewModel @Inject constructor(
     private val sharedPreferences: SyncSharedPreferences
 ) : ViewModel() {
     private val mAuth = FirebaseAuth.getInstance()
+    val loginedLiveData by lazy { MutableLiveData<Boolean>() }
 
-    fun getUser() = userRepository.getUser()
+    private val userLoginedResult = MutableLiveData<Boolean>()
 
     fun signInViaGoogle(account: GoogleSignInAccount?) {
         val credential = GoogleAuthProvider.getCredential(account!!.idToken, null)
@@ -23,6 +26,7 @@ class LoginViewModel @Inject constructor(
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d("SignIn Presenter", "signInWithCredential:success")
+                    loginedLiveData.postValue(true)
                     sharedPreferences.setLoggedIn(true)
                 } else {
                     Log.w("SignIn Presenter", "signInWithCredential:failure", task.exception)

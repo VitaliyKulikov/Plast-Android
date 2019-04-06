@@ -25,7 +25,11 @@ class LaunchViewModel @Inject constructor(
         launchDestination = onboardingCompletedResult.map {
             // If this check fails, prefer to launch login activity than show onboarding too often
             if (it == false) {
-                Event(LaunchDestination.ONBOARDING)
+                if (userLoginedResult.value == true) {
+                    Event(LaunchDestination.MAIN_ACTIVITY)
+                } else {
+                    Event(LaunchDestination.LOGIN)
+                }
             } else {
                 if (userLoginedResult.value == true) {
                     Event(LaunchDestination.MAIN_ACTIVITY)
@@ -38,7 +42,6 @@ class LaunchViewModel @Inject constructor(
 }
 
 enum class LaunchDestination {
-    ONBOARDING,
     MAIN_ACTIVITY,
     LOGIN,
 }
