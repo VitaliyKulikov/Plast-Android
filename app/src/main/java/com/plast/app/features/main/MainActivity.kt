@@ -12,6 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.plast.app.R
 import com.plast.app.baseui.BaseActivity
+import com.plast.app.features.main.checklist.fragments.CheckListPagerFragment
 import com.plast.app.toolbox.extensions.animationRotate
 import com.plast.app.toolbox.extensions.hideWithAnimationAlpha
 import com.plast.app.toolbox.extensions.showWithAnimationAlpha
@@ -57,7 +58,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun addFirstFragment() {
-        setFragment(HomeFragment.newInstance(), R.id.navigationFragmentContainer)
+        setFragment(CheckListPagerFragment.newInstance(), R.id.navigationFragmentContainer)
         setItemChecked(R.id.navigation_home)
         bottomNavigation.selectedItemId = R.id.navigation_home
     }
