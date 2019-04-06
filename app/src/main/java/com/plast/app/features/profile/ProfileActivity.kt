@@ -5,6 +5,7 @@ import com.plast.app.R
 import com.plast.app.baseui.BaseActivity
 import com.plast.app.features.profile.fragment.ProfileFragment
 
+
 class ProfileActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

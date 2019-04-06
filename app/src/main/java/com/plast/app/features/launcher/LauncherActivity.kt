@@ -24,7 +24,6 @@ class LauncherActivity : BaseActivity() {
 
             viewModel.launchDestination.observe(this, EventObserver { destination ->
                 when (destination) {
-                    LaunchDestination.ONBOARDING -> startActivity(Intent(this, LoginActivity::class.java))
                     LaunchDestination.LOGIN -> startActivity(Intent(this, LoginActivity::class.java))
                     LaunchDestination.MAIN_ACTIVITY -> startActivity(Intent(this, MainActivity::class.java))
                 }

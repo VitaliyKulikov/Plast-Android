@@ -35,11 +35,16 @@
     </style>
 
     <style name="AppTheme.Login.Title" parent="@style/AppTheme">
-        <item name="android:textSize">34sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:padding">16dp</item>
         <item name="android:lineSpacingExtra">7sp</item>
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBlack</item>
         <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="AppTheme.Login.Title.Small" parent="@style/AppTheme.Login.Title">
+        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="AppTheme.Login.AccentColorText" parent="@style/AppTheme">
@@ -118,11 +123,20 @@
         <item name="android:fontFamily">@font/sf_pro_display_bold</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
+
+    <style name="AppTheme.View.BG" parent="@style/AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
     <!-- Customize view styles -->
 
     <!-- Customize EditText styles -->
     <style name="AppTheme.TextInputEditText.UnderLined" parent="@style/AppTheme">
-            <item name="android:textSize">17sp</item>
+        <item name="android:textSize">17sp</item>
         <item name="android:paddingBottom">16dp</item>
     </style>
     <!-- Customize view styles -->
@@ -140,3 +154,4 @@
     </style>
     <!-- Customize FAB styles -->
 </resources>
+

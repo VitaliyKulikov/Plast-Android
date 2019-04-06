@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 28
@@ -20,7 +21,7 @@ android {
     def prodHost = '"http://plast-app/"'
 
     defaultConfig {
-        applicationId "start.plast.com"
+        applicationId "com.plast.app"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -71,6 +72,10 @@ dependencies {
     //livedata, viewmodel
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-database:16.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-auth:16.2.1'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
     //room
@@ -100,3 +105,5 @@ dependencies {
     //3d libs ¯\_(ツ)_/¯
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
 }
+
+apply plugin: 'com.google.gms.google-services'
