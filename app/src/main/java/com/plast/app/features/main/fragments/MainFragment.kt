@@ -36,20 +36,16 @@ class MainFragment : BaseFragment(), View.OnClickListener {
     }
 
     override fun setListeners() {
-    ivAvatar.setOnClickListener(this)
+        ivAvatar.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        when(v){
-            ivAvatar -> {
-                startActivity(Intent(activity, ProfileActivity::class.java))
-            }
+        when (v) {
+            ivAvatar -> startActivity(Intent(activity, ProfileActivity::class.java))
         }
     }
 
-    fun setData(){
-        ivAvatar.loadWithGlideCircleCrop("https://www.plast.org.ua/wp-content/uploads/2018/11/27459346_1897069087001526_6810170692466779901_n.jpg",R.drawable.ic_place_holder_circle)
+    fun setData() {
+        ivAvatar.loadWithGlideCircleCrop("https://www.plast.org.ua/wp-content/uploads/2018/11/27459346_1897069087001526_6810170692466779901_n.jpg", R.drawable.ic_place_holder_circle)
     }
-
-
 }
