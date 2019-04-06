@@ -1,11 +1,9 @@
 package com.plast.app.features.profile
 
 import android.os.Bundle
-import com.google.firebase.FirebaseApp
 import com.plast.app.R
 import com.plast.app.baseui.BaseActivity
 import com.plast.app.features.profile.fragment.ProfileFragment
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
