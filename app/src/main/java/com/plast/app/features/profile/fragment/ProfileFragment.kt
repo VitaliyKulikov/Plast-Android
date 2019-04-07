@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.view.View
 import com.plast.app.AppViewModelsFactory
 import com.plast.app.R
-import com.plast.app.baseui.BaseFragment
 import javax.inject.Inject
-import android.view.Menu
+import androidx.lifecycle.Observer
 import com.plast.app.ToolbarFragment
+import com.plast.app.features.profile.viewmodel.ProfileViewModel
+import com.plast.app.toolbox.extensions.loadWithGlideCircleCrop
 import consume
 import kotlinx.android.synthetic.main.fragment_profile.*
+import viewModelProvider
 
 
 class ProfileFragment : ToolbarFragment(), View.OnClickListener {
@@ -27,6 +29,8 @@ class ProfileFragment : ToolbarFragment(), View.OnClickListener {
     @Inject
     lateinit var vmFactory: AppViewModelsFactory
 
+    private lateinit var viewModel: ProfileViewModel
+
 
     companion object {
         val TAG = ProfileFragment::class.java.simpleName
@@ -40,9 +44,12 @@ class ProfileFragment : ToolbarFragment(), View.OnClickListener {
     }
 
     override fun initViewModel() {
-//        viewModel = ViewModelProviders
-//            .of(this, vmFactory)
-//            .get(LoginViewModel::class.java)
+        viewModel = viewModelProvider(vmFactory)
+        viewModel.userLiveData.observe(this, Observer {
+            tvName.text = it.name
+            ivProfileAvatar.loadWithGlideCircleCrop(it.avatarUrl,R.drawable.ic_place_holder_circle)
+
+        })
     }
 
     override fun setListeners() {
@@ -51,11 +58,5 @@ class ProfileFragment : ToolbarFragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
 
-    }
-
-     fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.main_menu, menu)
-        return true
     }
 }
