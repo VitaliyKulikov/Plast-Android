@@ -12,24 +12,24 @@
 		android:gravity="center_vertical"
 		android:maxLines="1"
 		android:text="@string/dash"
-		app:layout_constraintBottom_toBottomOf="@+id/iv_status_progress"
-		app:layout_constraintEnd_toStartOf="@id/iv_status_progress"
+		app:layout_constraintBottom_toBottomOf="@+id/tv_status_progress"
+		app:layout_constraintEnd_toStartOf="@id/tv_status_progress"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="@+id/iv_status_progress"
+		app:layout_constraintTop_toTopOf="@+id/tv_status_progress"
 		/>
 
 	<TextView
-		android:id="@+id/iv_status_progress"
+		android:id="@+id/tv_status_progress"
 		android:layout_width="64dp"
 		android:layout_height="64dp"
 		android:layout_marginStart="@dimen/margin_large"
-		android:background="@drawable/shape_circle"
 		android:gravity="center"
-		android:text="1"
+		tools:text="1"
 		android:textColor="@color/colorWhite"
 		android:textSize="28sp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
+		tools:background="@drawable/shape_circle_accent"
 		/>
 
 	<TextView
@@ -39,10 +39,10 @@
 		android:gravity="center_vertical"
 		android:maxLines="1"
 		android:text="@string/dash"
-		app:layout_constraintBottom_toBottomOf="@+id/iv_status_progress"
+		app:layout_constraintBottom_toBottomOf="@+id/tv_status_progress"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toEndOf="@id/iv_status_progress"
-		app:layout_constraintTop_toTopOf="@+id/iv_status_progress"
+		app:layout_constraintStart_toEndOf="@id/tv_status_progress"
+		app:layout_constraintTop_toTopOf="@+id/tv_status_progress"
 		/>
 
 	<androidx.cardview.widget.CardView
@@ -51,12 +51,11 @@
 		android:layout_marginStart="@dimen/margin_large"
 		android:layout_marginTop="@dimen/margin_large"
 		android:layout_marginBottom="@dimen/margin_large"
-		android:elevation="8dp"
 		app:cardCornerRadius="10dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/iv_status_progress"
+		app:layout_constraintTop_toBottomOf="@+id/tv_status_progress"
 		>
 
 		<androidx.constraintlayout.widget.ConstraintLayout
@@ -78,14 +77,27 @@
 				/>
 
 			<TextView
-				android:id="@+id/tv_count_of_coins"
+				android:id="@+id/tv_plustcoins"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="+10 пласткоїнів"
 				android:textColor="@color/colorYellow"
 				android:textSize="12sp"
 				app:layout_constraintStart_toStartOf="@id/tv_name"
 				app:layout_constraintTop_toBottomOf="@id/tv_name"
+				tools:text="+10 пласткоїнів"
+				/>
+
+			<TextView
+				android:id="@+id/tv_lock"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="@dimen/margin_small"
+				android:text="@string/lock"
+				android:textColor="@color/colorRed"
+				android:textSize="12sp"
+				app:layout_constraintBottom_toBottomOf="@+id/iv_lock"
+				app:layout_constraintEnd_toStartOf="@id/iv_lock"
+				app:layout_constraintTop_toTopOf="@+id/iv_lock"
 				/>
 
 			<ImageView
@@ -96,7 +108,7 @@
 				android:layout_marginEnd="@dimen/margin_large"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
-				app:srcCompat="@drawable/ic_unlocked"
+				tools:srcCompat="@drawable/ic_unlocked"
 				/>
 
 			<ImageView
@@ -110,7 +122,7 @@
 				app:layout_constraintDimensionRatio="16:9"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@id/tv_count_of_coins"
+				app:layout_constraintTop_toBottomOf="@id/tv_plustcoins"
 				app:srcCompat="@drawable/ill_step_one"
 				/>
 
@@ -172,4 +184,17 @@
 				/>
 		</androidx.constraintlayout.widget.ConstraintLayout>
 	</androidx.cardview.widget.CardView>
+
+	<View
+		android:id="@+id/view_inactive"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:alpha="0.5"
+		android:background="@color/inactiveColor"
+		android:elevation="8dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		/>
 </androidx.constraintlayout.widget.ConstraintLayout>

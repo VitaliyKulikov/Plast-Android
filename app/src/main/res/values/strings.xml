@@ -1,6 +1,8 @@
 <resources>
 	<string name="app_name">StartPlast</string>
 
+	<string name="key">413435101644-r4p3kdd85b3v8pjl94m0rpfil7bvkc85.apps.googleusercontent.com</string>
+
 	<!-- TODO: Remove or change this placeholder text -->
 	<string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -29,9 +31,10 @@
 
 	<string name="details">Деталі</string>
 
-	<string name="dash">-----------------------------------------------------------------------------------------</string>
+	<string name="dash">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</string>
 	<string name="register">Зареєструватися</string>
-	<string name="key">413435101644-r4p3kdd85b3v8pjl94m0rpfil7bvkc85.apps.googleusercontent.com</string>
     <string name="close">Close</string>
+
+    <string name="lock">Заблоковано</string>
 
 </resources>
