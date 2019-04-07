@@ -45,9 +45,6 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
     override fun initViewModel() {
 
         viewModel = viewModelProvider(viewModelFactory)
-
-        //TODO: LiveData and Observers
-
     }
 
     override fun setListeners() {
@@ -63,9 +60,7 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
             exit_btn -> finishActivity()
 
             btn_details -> {
-
-                // TODO: Some db stuff
-
+                viewModel.unlockNextStep()
                 finishActivity()
             }
         }

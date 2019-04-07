@@ -1,19 +1,22 @@
 package com.plast.app.features.details.viewmodel
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.plast.app.data.local.database.entity.CardEntity
-import com.plast.app.repositories.CardRepository
+import com.plast.app.data.local.sharedpreferences.SyncSharedPreferences
 import javax.inject.Inject
 
 class DetailsViewModel @Inject constructor (
-    private val cardRepository: CardRepository
+    private val sharedPreferences: SyncSharedPreferences
 ) : ViewModel() {
 
-    val cardLiveData by lazy { MutableLiveData<CardEntity>() }
+    private var currentUserCheckPoint: Int
 
-    fun loadDataByCardIdFromRepository(cardId: Int) {
+    init {
+        currentUserCheckPoint = sharedPreferences.getCurrentUserCheckPoint()
+    }
 
-        cardLiveData.value = cardRepository.getCardItem(cardId)
+    fun unlockNextStep() {
+        currentUserCheckPoint++
+
+        sharedPreferences.setCurrentUserCheckPoint(currentUserCheckPoint)
     }
 }
