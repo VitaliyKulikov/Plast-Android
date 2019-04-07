@@ -140,7 +140,9 @@ class CardFragment : BaseFragment(), View.OnClickListener {
     private fun onClickCard() {
         viewModel.mCurrentCardEntity.apply {
             if (cardPos <= currentUserCheckPoint) {
-                Toast.makeText(context, cardPos.toString(), Toast.LENGTH_LONG).show()
+                imageRes
+                titleResId
+                descriptionResId
             }
         }
     }
