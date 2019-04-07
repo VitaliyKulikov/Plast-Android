@@ -1,5 +1,6 @@
 package com.plast.app.features.main.checklist.fragments
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.lifecycle.Observer
 import com.plast.app.AppViewModelsFactory
 import com.plast.app.R
 import com.plast.app.baseui.BaseFragment
+import com.plast.app.features.details.DetailsActivity
 import com.plast.app.features.main.checklist.viewmodel.CardViewModel
 import com.plast.app.models.CURRENT
 import com.plast.app.models.CardModel
@@ -53,6 +55,10 @@ class CardFragment : BaseFragment() {
     }
 
     override fun setListeners() {
+        btn_details.setOnClickListener {
+            val intent = Intent(context, DetailsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setData(cm: CardModel) {

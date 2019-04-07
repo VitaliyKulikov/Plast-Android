@@ -1,5 +1,6 @@
 package com.plast.app.di
 
+import com.plast.app.features.details.viewmodel.DetailsViewModel
 import com.plast.app.features.launcher.viewmodel.LaunchViewModel
 import com.plast.app.features.login.viewmodel.LoginViewModel
 import com.plast.app.features.main.checklist.viewmodel.CardViewModel
@@ -22,4 +23,5 @@ interface AppViewModelsComponent {
     fun provideSignUpViewModel(): SignUpViewModel
     fun provideMainViewModel(): MainViewModel
     fun provideCardViewModel(): CardViewModel
+    fun provideDetailsViewModel(): DetailsViewModel
 }

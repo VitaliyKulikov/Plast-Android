@@ -3,6 +3,7 @@ package com.plast.app
 import androidx.collection.ArrayMap
 import androidx.lifecycle.ViewModel
 import com.plast.app.di.AppViewModelsComponent
+import com.plast.app.features.details.viewmodel.DetailsViewModel
 import com.plast.app.features.launcher.viewmodel.LaunchViewModel
 import com.plast.app.features.login.viewmodel.LoginViewModel
 import com.plast.app.features.main.viewmodel.MainViewModel
@@ -21,5 +22,6 @@ class AppViewModelsFactory(private val appViewModelsComponent: AppViewModelsComp
         creators[SignUpViewModel::class.java] = Callable { appViewModelsComponent.provideSignUpViewModel() }
         creators[MainViewModel::class.java] = Callable { appViewModelsComponent.provideMainViewModel() }
         creators[CardViewModel::class.java] = Callable { appViewModelsComponent.provideCardViewModel() }
+        creators[DetailsViewModel::class.java] = Callable { appViewModelsComponent.provideDetailsViewModel() }
     }
 }
