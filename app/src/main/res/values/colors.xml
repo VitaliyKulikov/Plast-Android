@@ -6,6 +6,7 @@
     <color name="colorAccentTransparent">#4cee5749</color>
 
     <color name="fontColor">#FF343434</color>
+    <color name="coinColors">#94FFA300</color>
 
     <color name="colorSuccess">#4cd964</color>
     <color name="colorError">#ff4b06</color>
@@ -20,7 +21,7 @@
     <color name="ripple_dark">#33ffffff</color>
     <color name="ripple_light">#1f000000</color>
 
-    <color name="colorBlue">#3b5998</color>
+    <color name="colorBlue">#FF416BE0</color>
 
     <color name="transparent">#00000000</color>
     <color name="BlackTransparent">#80323232</color>

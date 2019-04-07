@@ -5,6 +5,7 @@ import com.plast.app.features.login.viewmodel.LoginViewModel
 import com.plast.app.features.main.checklist.viewmodel.CardViewModel
 import com.plast.app.features.main.viewmodel.MainViewModel
 import com.plast.app.features.onboarding.viewmodel.OnBoardViewModel
+import com.plast.app.features.profile.viewmodel.ProfileViewModel
 import com.plast.app.features.signup.viewmodel.SignUpViewModel
 import dagger.Subcomponent
 
@@ -22,4 +23,5 @@ interface AppViewModelsComponent {
     fun provideSignUpViewModel(): SignUpViewModel
     fun provideMainViewModel(): MainViewModel
     fun provideCardViewModel(): CardViewModel
+    fun provideProfileViewModel(): ProfileViewModel
 }

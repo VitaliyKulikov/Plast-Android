@@ -20,12 +20,11 @@
 		/>
 
 	<TextView
-		android:id="@+id/textView"
+		android:id="@+id/tvUserName"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
 		android:layout_marginStart="@dimen/margin_small"
 		android:gravity="center_vertical"
-		android:text="Ollena"
 		android:textColor="@color/fontColor"
 		android:textSize="18sp"
 		android:textStyle="bold"
@@ -45,6 +44,6 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/textView"
+		app:layout_constraintTop_toBottomOf="@+id/tvUserName"
 		/>
 </androidx.constraintlayout.widget.ConstraintLayout>
