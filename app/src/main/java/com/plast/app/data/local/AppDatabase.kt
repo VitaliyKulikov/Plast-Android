@@ -7,15 +7,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.plast.app.AppExecutors
-import com.plast.app.data.local.database.dao.CardDao
 import com.plast.app.data.local.database.dao.UserDao
 import com.plast.app.data.local.database.entity.UserEntity
-import com.plast.app.data.local.database.entity.CardEntity
 
 @Database(
         entities = [
-            UserEntity::class,
-            CardEntity::class
+            UserEntity::class
         ],
         version = 1,
         exportSchema = false
@@ -55,6 +52,4 @@ abstract class AppDatabase : RoomDatabase() {
     }
 
     abstract fun userDao(): UserDao
-
-    abstract fun cardDao(): CardDao
 }

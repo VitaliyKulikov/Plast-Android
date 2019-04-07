@@ -1,45 +1,18 @@
 package com.plast.app.repositories
 
-import androidx.lifecycle.LiveData
-import com.plast.app.AppExecutors
 import com.plast.app.R
-import com.plast.app.data.local.AppDatabase
 import com.plast.app.data.local.database.entity.CardEntity
-import com.plast.app.data.local.sharedpreferences.SyncSharedPreferences
-import java.util.*
-import javax.inject.Inject
 
-class CardRepository
-@Inject constructor(
-        private val appDatabase: AppDatabase,
-        private val appExecutors: AppExecutors,
-        private val sharedPreferences: SyncSharedPreferences) {
+class CardRepository {
     private var cardList = emptyList<CardEntity>()
 
     init {
-        cardList = initCardList()
+        initCardList()
     }
 
-    fun getCardItem(cardPosition: Int): CardEntity {
-        return cardList[cardPosition]
-    }
-    fun getCardLiveData(): LiveData<List<CardEntity>> {
-        return appDatabase.cardDao().getAllCards()
-    }
+    fun getCardItem(cardPosition: Int) = cardList[cardPosition]
 
-    fun insertCardEntity(mCurrentCardEntity: CardEntity) {
-        appExecutors.ioExecutor.execute {
-            appDatabase.runInTransaction {
-                try {
-                    appDatabase.cardDao().insertData(mCurrentCardEntity)
-                } catch (ex: ConcurrentModificationException) {
-                    ex.printStackTrace()
-                }
-            }
-        }
-    }
-
-    private fun initCardList(): ArrayList<CardEntity> {
+    private fun initCardList() {
         val listOfCard = arrayListOf<CardEntity>()
         listOfCard.add(CardEntity(0, 10, R.drawable.ill_step_one, R.string.title_text, R.string.description_text))
         listOfCard.add(CardEntity(1, 20, R.drawable.ill_step_one, R.string.title_text, R.string.description_text))
@@ -54,6 +27,6 @@ class CardRepository
         listOfCard.add(CardEntity(10, 110, R.drawable.ill_step_one, R.string.title_text, R.string.description_text))
         listOfCard.add(CardEntity(11, 120, R.drawable.ill_step_one, R.string.title_text, R.string.description_text))
         listOfCard.add(CardEntity(12, 130, R.drawable.ill_step_one, R.string.title_text, R.string.description_text))
-        return listOfCard
+        cardList = listOfCard
     }
 }

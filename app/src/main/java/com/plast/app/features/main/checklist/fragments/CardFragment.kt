@@ -38,8 +38,6 @@ class CardFragment : BaseFragment(), View.OnClickListener {
 
     private lateinit var viewModel: CardViewModel
 
-    private val currentUserCheckPoint: Int = 3
-
     override fun layoutId(): Int = R.layout.fragment_card
 
     override fun onViewReady(inflatedView: View, args: Bundle?) {
@@ -47,12 +45,7 @@ class CardFragment : BaseFragment(), View.OnClickListener {
 
         viewModel = viewModelProvider(vmFactory)
         viewModel.cardPosition = position
-        viewModel.currentUserCheckPoint = currentUserCheckPoint
         viewModel.cardLiveData.observe(this, Observer { setData(it) })
-        viewModel.getItems()
-        viewModel.cardDao.observe(this, Observer {
-            val a =it
-        })
     }
 
     override fun initViewModel() {
@@ -139,7 +132,7 @@ class CardFragment : BaseFragment(), View.OnClickListener {
 
     private fun onClickCard() {
         viewModel.mCurrentCardEntity.apply {
-            if (cardPos <= currentUserCheckPoint) {
+            if (cardPos <= viewModel.currentUserCheckPoint) {
                 imageRes
                 titleResId
                 descriptionResId
