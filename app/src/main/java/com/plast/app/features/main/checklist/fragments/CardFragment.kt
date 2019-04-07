@@ -53,11 +53,6 @@ class CardFragment : BaseFragment(), View.OnClickListener {
     }
 
     override fun setListeners() {
-        btn_details.setOnClickListener {
-            val intent = Intent(context, DetailsActivity::class.java)
-            startActivity(intent)
-        }
-
         card_view.setOnClickListener(this)
     }
 
@@ -139,9 +134,15 @@ class CardFragment : BaseFragment(), View.OnClickListener {
     private fun onClickCard() {
         viewModel.mCurrentCardEntity.apply {
             if (cardPos <= viewModel.currentUserCheckPoint) {
-                imageRes
-                titleResId
-                descriptionResId
+                val intent = Intent(context, DetailsActivity::class.java).apply {
+                    val bundle = Bundle().apply {
+                        putInt("imageRes", imageRes)
+                        putInt("titleResId", titleResId)
+                        putInt("descriptionResId", descriptionResId)
+                    }
+                    putExtra("cardFragment", bundle)
+                }
+                startActivity(intent)
             }
         }
     }

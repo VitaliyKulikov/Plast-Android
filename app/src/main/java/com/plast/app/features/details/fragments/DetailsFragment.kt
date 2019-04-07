@@ -24,12 +24,12 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
     companion object {
 
         val TAG = DetailsFragment::class.java.simpleName
-        fun newInstance() = DetailsFragment()
+        fun newInstance(bundle: Bundle) = DetailsFragment().apply { arguments = bundle }
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_details, container, false)
     }
@@ -37,16 +37,18 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
     override fun layoutId(): Int = R.layout.fragment_details
 
     override fun onViewReady(inflatedView: View, args: Bundle?) {
-
         rootView = inflatedView
 
         tv_details_description.movementMethod = ScrollingMovementMethod()
+
+        imageView2.setImageResource(arguments!!.getInt("imageRes"))
+        tv_details_page_title.text = getText(arguments!!.getInt("titleResId"))
+        tv_details_description.text = getText(arguments!!.getInt("descriptionResId"))
 
         setListeners()
     }
 
     override fun initViewModel() {
-
         viewModel = viewModelProvider(viewModelFactory)
     }
 

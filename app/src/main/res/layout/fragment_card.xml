@@ -129,16 +129,19 @@
 
 			<androidx.appcompat.widget.AppCompatTextView
 				android:id="@+id/tv_title"
-				android:layout_width="wrap_content"
+				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_marginStart="@dimen/margin_large"
+				android:layout_marginEnd="@dimen/margin_large"
 				android:layout_marginTop="@dimen/margin_large"
+				android:gravity="start"
 				android:textColor="@color/colorBlack"
 				android:textSize="24sp"
 				android:textStyle="bold"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/iv_card"
-				tools:text="@string/title_text"
+				app:layout_constraintEnd_toEndOf="parent"
+				tools:text="@string/title_one"
 				/>
 
 			<TextView
@@ -155,7 +158,7 @@
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/tv_title"
-				tools:text="@string/description_text"
+				tools:text="@string/description_one"
 				/>
 
 			<View

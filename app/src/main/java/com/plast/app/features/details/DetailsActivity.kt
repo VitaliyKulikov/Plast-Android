@@ -10,13 +10,13 @@ class DetailsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
-        addFragment()
+        addFragment(intent.getBundleExtra("cardFragment"))
     }
 
-    private fun addFragment() {
+    private fun addFragment(bundle: Bundle) {
         supportFragmentManager.beginTransaction()
             .add(R.id.fragmentContainer,
-                DetailsFragment.newInstance(),
+                DetailsFragment.newInstance(bundle),
                 DetailsFragment.TAG
             ).commit()
     }
