@@ -28,9 +28,11 @@ class LoginViewModel @Inject constructor(
                     Log.d("SignIn Presenter", "signInWithCredential:success")
                     loginedLiveData.postValue(true)
                     sharedPreferences.setLoggedIn(true)
+                    userRepository.setUpUser()
                 } else {
                     Log.w("SignIn Presenter", "signInWithCredential:failure", task.exception)
                 }
             }
     }
+
 }
