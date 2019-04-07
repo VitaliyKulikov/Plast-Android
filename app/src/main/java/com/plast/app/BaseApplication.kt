@@ -27,8 +27,7 @@ class BaseApplication : MultiDexApplication(), HasActivityInjector {
         appComponent = initInjections(this)
     }
 
-    override fun activityInjector(): AndroidInjector<Activity> =
-        dispatchingInjector
+    override fun activityInjector(): AndroidInjector<Activity> = dispatchingInjector
 
     fun getInstance(): BaseApplication {
         return instance

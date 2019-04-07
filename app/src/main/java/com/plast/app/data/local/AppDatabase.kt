@@ -11,11 +11,11 @@ import com.plast.app.data.local.database.dao.UserDao
 import com.plast.app.data.local.database.entity.UserEntity
 
 @Database(
-    entities = [
-        UserEntity::class
-    ],
-    version = 1,
-    exportSchema = false
+        entities = [
+            UserEntity::class
+        ],
+        version = 1,
+        exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
 
@@ -28,8 +28,7 @@ abstract class AppDatabase : RoomDatabase() {
         fun getInstance(app: Application, appExecutors: AppExecutors): AppDatabase {
             if (dbInstance == null) {
                 synchronized(AppDatabase::class.java) {
-                    dbInstance =
-                        createDataBase(app, appExecutors)
+                    dbInstance = createDataBase(app, appExecutors)
                     dbInstance!!.updateDatabaseCreated(app)
                 }
             }
@@ -37,10 +36,8 @@ abstract class AppDatabase : RoomDatabase() {
         }
 
         private fun createDataBase(app: Application, appExecutors: AppExecutors): AppDatabase {
-            return Room.databaseBuilder(app.applicationContext, AppDatabase::class.java,
-                dbName
-            )
-                .build()
+            return Room.databaseBuilder(app.applicationContext, AppDatabase::class.java, dbName)
+                    .build()
         }
     }
 

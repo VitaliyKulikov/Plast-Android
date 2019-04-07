@@ -11,41 +11,49 @@ class SyncSharedPreferences(context: Context) : AppSharedPreferences {
         const val KEY_IS_LOGGED_IN = "pref_is_logged_in"
         const val KEY_IS_ONBOARDING_PASSED = "pref_is_onboard_passed"
         const val KEY_CURRENT_USER_ID = "pref_current_user_id"
+        const val KEY_CURRENT_USER_CHECK_POINT = "pref_current_user_check_point"
     }
 
-    private val sharedPreferences = context.getSharedPreferences(
-        SHARED_PREFERENCES_NAME,
-        Context.MODE_PRIVATE
+    private val sp = context.getSharedPreferences(
+            SHARED_PREFERENCES_NAME,
+            Context.MODE_PRIVATE
     )
 
-    override fun isLoggedIn(): Boolean = sharedPreferences.getBoolean(KEY_IS_LOGGED_IN, false)
+    override fun isLoggedIn(): Boolean = sp.getBoolean(KEY_IS_LOGGED_IN, false)
     override fun setLoggedIn(loggedIn: Boolean) {
-        sharedPreferences
-            .edit()
-            .putBoolean(KEY_IS_LOGGED_IN, loggedIn)
-            .apply()
+        sp
+                .edit()
+                .putBoolean(KEY_IS_LOGGED_IN, loggedIn)
+                .apply()
     }
 
-    override fun isOnboardingPassed(): Boolean = sharedPreferences.getBoolean(KEY_IS_ONBOARDING_PASSED, false)
+    override fun isOnboardingPassed(): Boolean = sp.getBoolean(KEY_IS_ONBOARDING_PASSED, false)
     override fun setOnBoardingPassed(passed: Boolean) {
-        sharedPreferences
-            .edit()
-            .putBoolean(KEY_IS_ONBOARDING_PASSED, passed)
-            .apply()
+        sp
+                .edit()
+                .putBoolean(KEY_IS_ONBOARDING_PASSED, passed)
+                .apply()
     }
 
-    override fun getCurrentUserId(): Int = sharedPreferences.getInt(KEY_CURRENT_USER_ID, 0)
+    override fun getCurrentUserId(): Int = sp.getInt(KEY_CURRENT_USER_ID, 0)
     override fun setCurrentUserId(id: Int) {
-        sharedPreferences
-            .edit()
-            .putInt(KEY_CURRENT_USER_ID, id)
-            .apply()
+        sp
+                .edit()
+                .putInt(KEY_CURRENT_USER_ID, id)
+                .apply()
+    }
+
+    override fun getCurrentUserCheckPoint() = sp.getInt(KEY_CURRENT_USER_CHECK_POINT, 0)
+
+    override fun setCurrentUserCheckPoint(position: Int) {
+        sp.edit().putInt(KEY_CURRENT_USER_CHECK_POINT, position).apply()
     }
 
     fun clearUser() {
-        sharedPreferences.edit()
-            .remove(KEY_CURRENT_USER_ID)
-            .remove(KEY_IS_LOGGED_IN)
-            .apply()
+        sp.edit()
+                .remove(KEY_CURRENT_USER_CHECK_POINT)
+                .remove(KEY_CURRENT_USER_ID)
+                .remove(KEY_IS_LOGGED_IN)
+                .apply()
     }
 }

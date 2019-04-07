@@ -10,4 +10,7 @@ interface AppSharedPreferences {
 
     fun getCurrentUserId(): Int
     fun setCurrentUserId(id: Int)
+
+    fun getCurrentUserCheckPoint(): Int
+    fun setCurrentUserCheckPoint(position: Int)
 }

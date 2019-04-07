@@ -1,14 +1,13 @@
-package com.plast.app.models
+package com.plast.app.data.local.database.entity
 
-class CardModel(
+data class CardEntity(
         val cardPos: Int,
         val plastCoin: Int,
         val imageRes: Int,
         val titleResId: Int,
-        val descriptionResId: Int
-) {
-    var cardState: Int = -1
-}
+        val descriptionResId: Int,
+        var cardState: Int = -1
+)
 
 const val DONE = 1
 const val CURRENT = 2
