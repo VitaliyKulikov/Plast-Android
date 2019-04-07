@@ -1,5 +1,6 @@
 package com.plast.app.di.modules
 
+import com.plast.app.features.details.fragments.DetailsFragment
 import com.plast.app.features.login.fragments.LoginFragment
 import com.plast.app.features.main.checklist.fragments.CardFragment
 import com.plast.app.features.main.fragments.MainFragment
@@ -29,4 +30,7 @@ interface FragmentBuilder {
 
     @ContributesAndroidInjector
     fun provideCheckListPagerFragment(): CardFragment
+
+    @ContributesAndroidInjector
+    fun provideDetailsFragment(): DetailsFragment
 }

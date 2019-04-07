@@ -51,5 +51,8 @@
     <string name="close">Close</string>
 
     <string name="lock">Заблоковано</string>
+    <string name="done">Зроблено</string>
+
+	<string name="formatter_coins">%1$d пласткоінів</string>
 
 </resources>

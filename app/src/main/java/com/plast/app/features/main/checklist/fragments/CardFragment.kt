@@ -1,19 +1,20 @@
 package com.plast.app.features.main.checklist.fragments
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.plast.app.AppViewModelsFactory
 import com.plast.app.R
 import com.plast.app.baseui.BaseFragment
-import com.plast.app.features.main.checklist.viewmodel.CardViewModel
 import com.plast.app.data.local.database.entity.CURRENT
 import com.plast.app.data.local.database.entity.CardEntity
 import com.plast.app.data.local.database.entity.DONE
 import com.plast.app.data.local.database.entity.LOCKED
+import com.plast.app.features.details.DetailsActivity
+import com.plast.app.features.main.checklist.viewmodel.CardViewModel
 import com.plast.app.toolbox.extensions.gone
 import com.plast.app.toolbox.extensions.hide
 import com.plast.app.toolbox.extensions.show
@@ -52,6 +53,11 @@ class CardFragment : BaseFragment(), View.OnClickListener {
     }
 
     override fun setListeners() {
+        btn_details.setOnClickListener {
+            val intent = Intent(context, DetailsActivity::class.java)
+            startActivity(intent)
+        }
+
         card_view.setOnClickListener(this)
     }
 

@@ -12,6 +12,9 @@ class ProfileViewModel @Inject constructor(
     private val userRepository: UserRepository
 ) : ViewModel() {
 
+    val coinsLiveData = userRepository.coinsLiveData
+    val currentStepLiveData = userRepository.currentStepLiveData
+
     private val _userLiveData by lazy{MutableLiveData<UserEntity>()}
     val userLiveData: LiveData<UserEntity>
         get() {

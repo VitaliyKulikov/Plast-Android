@@ -1,5 +1,6 @@
 package com.plast.app.di.modules
 
+import com.plast.app.features.details.DetailsActivity
 import com.plast.app.features.launcher.LauncherActivity
 import com.plast.app.features.login.LoginActivity
 import com.plast.app.features.main.MainActivity
@@ -30,4 +31,7 @@ interface ActivityBuilder {
 
     @ContributesAndroidInjector
     fun contributeProfile(): ProfileActivity
+
+    @ContributesAndroidInjector
+    fun contributeDetails(): DetailsActivity
 }
