@@ -29,6 +29,14 @@
             "package_name": "com.plast.app",
             "certificate_hash": "c7e393091e9e5f3a9022d925d74171377fc8d836"
           }
+        },
+        {
+          "client_id": "413435101644-6paia2mhhm2cbpb9om0n37tol3656ndd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.plast.app",
+            "certificate_hash": "482b828a98554e73c491e068ebfcb1ef97678b95"
+          }
         }
       ],
       "api_key": [
@@ -40,7 +48,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "413435101644-dg237fhovmoil7tqk3do7a41vt8cl42j.apps.googleusercontent.com",
+              "client_id": "413435101644-r4p3kdd85b3v8pjl94m0rpfil7bvkc85.apps.googleusercontent.com",
               "client_type": 3
             },
             {
