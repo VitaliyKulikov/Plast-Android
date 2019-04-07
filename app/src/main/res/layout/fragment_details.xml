@@ -55,6 +55,7 @@
                 android:ellipsize="end"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
+                android:scrollbars="vertical"
 
                 app:layout_constraintStart_toStartOf="@+id/imageView2"
                 app:layout_constraintEnd_toEndOf="@+id/imageView2"

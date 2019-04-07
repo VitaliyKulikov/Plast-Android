@@ -1,6 +1,7 @@
 package com.plast.app.features.details.fragments
 
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,8 @@ class DetailsFragment : BaseFragment(), View.OnClickListener {
     override fun onViewReady(inflatedView: View, args: Bundle?) {
 
         rootView = inflatedView
+
+        tv_details_description.movementMethod = ScrollingMovementMethod()
 
         setListeners()
     }
