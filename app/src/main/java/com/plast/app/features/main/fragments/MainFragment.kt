@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import com.plast.app.AppViewModelsFactory
 import com.plast.app.R
 import com.plast.app.baseui.BaseFragment
@@ -37,6 +38,10 @@ class MainFragment : BaseFragment(), View.OnClickListener {
 
     override fun initViewModel() {
         viewModel = viewModelProvider(vmFactory)
+        viewModel.userLiveData.observe(this, Observer {
+            ivAvatar.loadWithGlideCircleCrop(it.avatarUrl,R.drawable.ic_place_holder_circle)
+            tvUserName.text = it.name
+        })
     }
 
     override fun setListeners() {

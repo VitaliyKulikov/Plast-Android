@@ -9,6 +9,7 @@ import com.plast.app.features.login.viewmodel.LoginViewModel
 import com.plast.app.features.main.viewmodel.MainViewModel
 import com.plast.app.features.main.checklist.viewmodel.CardViewModel
 import com.plast.app.features.onboarding.viewmodel.OnBoardViewModel
+import com.plast.app.features.profile.viewmodel.ProfileViewModel
 import com.plast.app.features.signup.viewmodel.SignUpViewModel
 import java.util.concurrent.Callable
 
@@ -23,5 +24,6 @@ class AppViewModelsFactory(private val appViewModelsComponent: AppViewModelsComp
         creators[MainViewModel::class.java] = Callable { appViewModelsComponent.provideMainViewModel() }
         creators[CardViewModel::class.java] = Callable { appViewModelsComponent.provideCardViewModel() }
         creators[DetailsViewModel::class.java] = Callable { appViewModelsComponent.provideDetailsViewModel() }
+        creators[ProfileViewModel::class.java] = Callable { appViewModelsComponent.provideProfileViewModel() }
     }
 }
