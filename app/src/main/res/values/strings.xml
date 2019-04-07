@@ -37,8 +37,7 @@
 
 	<string name="details">Деталі</string>
 
-	<string name="dash">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	</string>
+	<string name="dash">-   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   </string>
 	<string name="register">Зареєструватися</string>
     <string name="close">Close</string>
 
