@@ -37,4 +37,6 @@
 
     <string name="lock">Заблоковано</string>
 
+	<string name="formatter_coins">%1$d пласткоінів</string>
+
 </resources>
